@@ -49,7 +49,7 @@ public class Archivo {
     
     private File obtenerArchivoa() {       
         try {
-            URL url = getClass().getClassLoader().getResource("sistemadeasientos/resources/archivos/asientos.txt");
+            URL url = getClass().getClassLoader().getResource("sistemadeasientos/resource/archivos/asientos.txt");
             return new File(url.toURI());            
         } catch (URISyntaxException ex) {
             ex.printStackTrace();
@@ -59,7 +59,7 @@ public class Archivo {
     
     private File obtenerArchivo() {
         // Obtener el InputStream del recurso
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("sistemadeasientos/resources/archivos/asientos.txt");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("sistemadeasientos/resource/archivos/asientos.txt");
         if (inputStream != null) {
             // Crear un archivo temporal para copiar el contenido del InputStream
             File tempFile;
