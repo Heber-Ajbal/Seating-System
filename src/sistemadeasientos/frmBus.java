@@ -5,6 +5,8 @@
  */
 package sistemadeasientos;
 
+import sistemadeasientos.model.BusModel;
+
 /**
  *
  * @author Heber
@@ -14,8 +16,12 @@ public class frmBus extends javax.swing.JFrame {
     /**
      * Creates new form frmBus
      */
+    
+    private BusModel modelo;
+    
     public frmBus() {
         initComponents();
+        modelo = new BusModel();
     }
 
     /**
@@ -141,8 +147,8 @@ public class frmBus extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
