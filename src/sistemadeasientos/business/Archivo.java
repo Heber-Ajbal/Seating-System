@@ -58,7 +58,7 @@ public class Archivo {
     InputStream inputStream = getClass().getClassLoader().getResourceAsStream("sistemadeasientos/resource/asientos.txt");
     if (inputStream != null) {
         // Especificar la ruta de destino del archivo
-        String rutaDestino = "D:\\Heber\\Documents\\Proyectos Java\\SistemaDeAsientos\\src\\sistemadeasientos\\resource\\asientos.txt"; // Reemplaza con tu ruta deseada
+        String rutaDestino = "C:\\Users\\Digitacion Nery\\Documents\\GitHub\\Seating-System\\src\\sistemadeasientos\\resource\\asientos.txt"; // Reemplaza con tu ruta deseada
         
         try {
             // Crear un nuevo archivo en la ruta de destino
