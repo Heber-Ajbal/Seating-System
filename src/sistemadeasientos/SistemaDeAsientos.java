@@ -26,6 +26,10 @@ public class SistemaDeAsientos extends Application {
         lst.cargarProductos();
         lst.Imprimir();
         
+        frmBus bus = new frmBus();
+        
+        bus.show();
+        
     }
 
     /**
