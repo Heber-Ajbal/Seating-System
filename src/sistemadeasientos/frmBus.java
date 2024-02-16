@@ -25,6 +25,8 @@ public class frmBus extends javax.swing.JFrame {
     private String pAsiento;
     private float precio;
     Icon taken = new ImageIcon(ClassLoader.getSystemResource("sistemadeasientos/resource/T1.png"));
+    private boolean Guardar;
+    private ReservacionModel rs;
     
     public frmBus() {
         initComponents();
@@ -666,162 +668,194 @@ public class frmBus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB6ActionPerformed
-        pAsiento = ObtenerAsiento("B6");
+        pAsiento = ObtenerAsiento("B6");        
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB6ActionPerformed
 
     private void btnA7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA7ActionPerformed
         pAsiento = ObtenerAsiento("A7");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA7ActionPerformed
 
     private void btnA6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA6ActionPerformed
         pAsiento = ObtenerAsiento("A6");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA6ActionPerformed
 
     private void btnA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA5ActionPerformed
         pAsiento = ObtenerAsiento("A5");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA5ActionPerformed
 
     private void btnA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA4ActionPerformed
         pAsiento = ObtenerAsiento("A4");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA4ActionPerformed
 
     private void btnA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA2ActionPerformed
         pAsiento = ObtenerAsiento("A2");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA2ActionPerformed
 
     private void btnA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA3ActionPerformed
         pAsiento = ObtenerAsiento("A3");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA3ActionPerformed
 
     private void btnA0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA0ActionPerformed
         pAsiento = ObtenerAsiento("A0");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA0ActionPerformed
 
     private void btnA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA1ActionPerformed
         pAsiento = ObtenerAsiento("A1");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA1ActionPerformed
 
     private void btnC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC3ActionPerformed
         pAsiento = ObtenerAsiento("C3");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC3ActionPerformed
 
     private void btnB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB7ActionPerformed
         pAsiento = ObtenerAsiento("B7");
+        Guardar = true;        
         AgregarDatos();
     }//GEN-LAST:event_btnB7ActionPerformed
 
     private void btnC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC7ActionPerformed
        pAsiento = ObtenerAsiento("C7");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC7ActionPerformed
 
     private void btnD7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD7ActionPerformed
         pAsiento = ObtenerAsiento("D7");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD7ActionPerformed
 
     private void btnC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC6ActionPerformed
         pAsiento = ObtenerAsiento("C6");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC6ActionPerformed
 
     private void btnD6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD6ActionPerformed
         pAsiento = ObtenerAsiento("D6");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD6ActionPerformed
 
     private void btnB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB5ActionPerformed
        pAsiento = ObtenerAsiento("B5");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB5ActionPerformed
 
     private void btnC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC5ActionPerformed
         pAsiento = ObtenerAsiento("C5");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC5ActionPerformed
 
     private void btnD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD5ActionPerformed
         pAsiento = ObtenerAsiento("D5");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD5ActionPerformed
 
     private void btnB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB4ActionPerformed
         pAsiento = ObtenerAsiento("B4");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB4ActionPerformed
 
     private void btnC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC4ActionPerformed
         pAsiento = ObtenerAsiento("C4");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC4ActionPerformed
 
     private void btnD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD4ActionPerformed
       pAsiento = ObtenerAsiento("D4");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD4ActionPerformed
 
     private void btnB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB3ActionPerformed
         pAsiento = ObtenerAsiento("B3");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB3ActionPerformed
 
     private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
     pAsiento = ObtenerAsiento("D3");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD3ActionPerformed
 
     private void btnB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB2ActionPerformed
       pAsiento = ObtenerAsiento("B2");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB2ActionPerformed
 
     private void btnC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC2ActionPerformed
         pAsiento = ObtenerAsiento("C2");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC2ActionPerformed
 
     private void btnD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD2ActionPerformed
        pAsiento = ObtenerAsiento("D2");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD2ActionPerformed
 
     private void btnB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB1ActionPerformed
        pAsiento = ObtenerAsiento("B1");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB1ActionPerformed
 
     private void btnC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC1ActionPerformed
         pAsiento = ObtenerAsiento("C1");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC1ActionPerformed
 
     private void btnD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD1ActionPerformed
         pAsiento = ObtenerAsiento("D1");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD1ActionPerformed
 
     private void btnB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB0ActionPerformed
         pAsiento = ObtenerAsiento("B0");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB0ActionPerformed
 
     private void btnC0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC0ActionPerformed
         pAsiento = ObtenerAsiento("C0");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC0ActionPerformed
 
     private void btnD0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD0ActionPerformed
        pAsiento = ObtenerAsiento("D0");
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD0ActionPerformed
 
@@ -846,18 +880,24 @@ public class frmBus extends javax.swing.JFrame {
         ListaAsientos lst = new ListaAsientos();
         lst.Agregar(reservacion);
         lst.GuardarArchivo();
+        CambiarDisponibilidad();
     }
     
     private void CambiarDisponibilidad(){
         ListaAsientos lst = new ListaAsientos();
-        lst.cargarProductos();
-        
-        for(int i=0; i < lst.AllReservacion.length; i++ ){
-            String idAsientoD = lst.AllReservacion[i].getPocision();
+        int cantidad;
+        if(!Guardar){
+            lst.cargarProductos();
+            cantidad = lst.AllReservacion.length;
+        }else{
+            cantidad = 1;
+        }
+           
+            for(int i=0; i < cantidad; i++ ){
+            String idAsientoD = Guardar ? pAsiento : lst.AllReservacion[i].getPocision();
             String test = idAsientoD;
             
-            switch(idAsientoD){
-            
+            switch(idAsientoD){       
                 case "A0":
                     btnA0.setIcon(taken);
                     break;
@@ -866,6 +906,9 @@ public class frmBus extends javax.swing.JFrame {
                     break;
                     case "A2":
                     btnA2.setIcon(taken);
+                    break;
+                    case "A3":
+                    btnA3.setIcon(taken);
                     break;
                     case "A4":
                     btnA4.setIcon(taken);
@@ -886,6 +929,9 @@ public class frmBus extends javax.swing.JFrame {
                     btnB1.setIcon(taken);
                     break;
                     case "B2":
+                    btnB2.setIcon(taken);
+                    break;
+                    case "B3":
                     btnB2.setIcon(taken);
                     break;
                     case "B4":
@@ -909,6 +955,9 @@ public class frmBus extends javax.swing.JFrame {
                     case "C2":
                     btnC2.setIcon(taken);
                     break;
+                    case "C3":
+                    btnC3.setIcon(taken);
+                    break;
                     case "C4":
                     btnC4.setIcon(taken);
                     break;
@@ -928,6 +977,9 @@ public class frmBus extends javax.swing.JFrame {
                     btnD1.setIcon(taken);
                     break;
                     case "D2":
+                    btnD2.setIcon(taken);
+                    break;
+                    case "D3":
                     btnD2.setIcon(taken);
                     break;
                     case "D4":
