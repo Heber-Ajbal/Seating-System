@@ -240,10 +240,25 @@ public class frmBus extends javax.swing.JFrame {
         });
 
         btnB0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB0ActionPerformed(evt);
+            }
+        });
 
         btnC0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC0ActionPerformed(evt);
+            }
+        });
 
         btnD0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD0ActionPerformed(evt);
+            }
+        });
 
         btnA0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
         btnA0.addActionListener(new java.awt.event.ActionListener() {
@@ -295,14 +310,39 @@ public class frmBus extends javax.swing.JFrame {
         });
 
         btnB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB1ActionPerformed(evt);
+            }
+        });
 
         btnB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB2ActionPerformed(evt);
+            }
+        });
 
         btnB3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB3ActionPerformed(evt);
+            }
+        });
 
         btnB4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB4ActionPerformed(evt);
+            }
+        });
 
         btnB5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB5ActionPerformed(evt);
+            }
+        });
 
         btnB6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
         btnB6.addActionListener(new java.awt.event.ActionListener() {
@@ -319,6 +359,11 @@ public class frmBus extends javax.swing.JFrame {
         });
 
         btnC7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC7ActionPerformed(evt);
+            }
+        });
 
         btnC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
         btnC3.addActionListener(new java.awt.event.ActionListener() {
@@ -328,28 +373,88 @@ public class frmBus extends javax.swing.JFrame {
         });
 
         btnC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC4ActionPerformed(evt);
+            }
+        });
 
         btnC6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC6ActionPerformed(evt);
+            }
+        });
 
         btnC5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC5ActionPerformed(evt);
+            }
+        });
 
         btnC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC2ActionPerformed(evt);
+            }
+        });
 
         btnC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC1ActionPerformed(evt);
+            }
+        });
 
         btnD4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD4ActionPerformed(evt);
+            }
+        });
 
         btnD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD2ActionPerformed(evt);
+            }
+        });
 
         btnD7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD7ActionPerformed(evt);
+            }
+        });
 
         btnD3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD3ActionPerformed(evt);
+            }
+        });
 
         btnD5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD5ActionPerformed(evt);
+            }
+        });
 
         btnD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD1ActionPerformed(evt);
+            }
+        });
 
         btnD6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnD6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -615,6 +720,111 @@ public class frmBus extends javax.swing.JFrame {
         AgregarDatos();
     }//GEN-LAST:event_btnB7ActionPerformed
 
+    private void btnC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC7ActionPerformed
+       pAsiento = ObtenerAsiento("C7");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC7ActionPerformed
+
+    private void btnD7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD7ActionPerformed
+        pAsiento = ObtenerAsiento("D7");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD7ActionPerformed
+
+    private void btnC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC6ActionPerformed
+        pAsiento = ObtenerAsiento("C6");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC6ActionPerformed
+
+    private void btnD6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD6ActionPerformed
+        pAsiento = ObtenerAsiento("D6");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD6ActionPerformed
+
+    private void btnB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB5ActionPerformed
+       pAsiento = ObtenerAsiento("B5");
+        AgregarDatos();
+    }//GEN-LAST:event_btnB5ActionPerformed
+
+    private void btnC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC5ActionPerformed
+        pAsiento = ObtenerAsiento("C5");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC5ActionPerformed
+
+    private void btnD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD5ActionPerformed
+        pAsiento = ObtenerAsiento("D5");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD5ActionPerformed
+
+    private void btnB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB4ActionPerformed
+        pAsiento = ObtenerAsiento("B4");
+        AgregarDatos();
+    }//GEN-LAST:event_btnB4ActionPerformed
+
+    private void btnC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC4ActionPerformed
+        pAsiento = ObtenerAsiento("C4");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC4ActionPerformed
+
+    private void btnD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD4ActionPerformed
+      pAsiento = ObtenerAsiento("D4");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD4ActionPerformed
+
+    private void btnB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB3ActionPerformed
+        pAsiento = ObtenerAsiento("B3");
+        AgregarDatos();
+    }//GEN-LAST:event_btnB3ActionPerformed
+
+    private void btnD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD3ActionPerformed
+    pAsiento = ObtenerAsiento("D3");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD3ActionPerformed
+
+    private void btnB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB2ActionPerformed
+      pAsiento = ObtenerAsiento("B2");
+        AgregarDatos();
+    }//GEN-LAST:event_btnB2ActionPerformed
+
+    private void btnC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC2ActionPerformed
+        pAsiento = ObtenerAsiento("C2");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC2ActionPerformed
+
+    private void btnD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD2ActionPerformed
+       pAsiento = ObtenerAsiento("D2");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD2ActionPerformed
+
+    private void btnB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB1ActionPerformed
+       pAsiento = ObtenerAsiento("B1");
+        AgregarDatos();
+    }//GEN-LAST:event_btnB1ActionPerformed
+
+    private void btnC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC1ActionPerformed
+        pAsiento = ObtenerAsiento("C1");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC1ActionPerformed
+
+    private void btnD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD1ActionPerformed
+        pAsiento = ObtenerAsiento("D1");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD1ActionPerformed
+
+    private void btnB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB0ActionPerformed
+        pAsiento = ObtenerAsiento("B0");
+        AgregarDatos();
+    }//GEN-LAST:event_btnB0ActionPerformed
+
+    private void btnC0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC0ActionPerformed
+        pAsiento = ObtenerAsiento("C0");
+        AgregarDatos();
+    }//GEN-LAST:event_btnC0ActionPerformed
+
+    private void btnD0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD0ActionPerformed
+       pAsiento = ObtenerAsiento("D0");
+        AgregarDatos();
+    }//GEN-LAST:event_btnD0ActionPerformed
+
     private void AgregarDatos(){
         frmDatos ingresarDatos = new frmDatos(this);      
         ingresarDatos.show();          
@@ -650,6 +860,87 @@ public class frmBus extends javax.swing.JFrame {
             
                 case "A0":
                     btnA0.setIcon(taken);
+                    break;
+                    case "A1":
+                    btnA1.setIcon(taken);
+                    break;
+                    case "A2":
+                    btnA2.setIcon(taken);
+                    break;
+                    case "A4":
+                    btnA4.setIcon(taken);
+                    break;
+                    case "A5":
+                    btnA5.setIcon(taken);
+                    break;
+                    case "A6":
+                    btnA6.setIcon(taken);
+                    break;
+                    case "A7":
+                    btnA7.setIcon(taken);
+                    break;
+                    case "B0":
+                    btnB0.setIcon(taken);
+                    break;
+                    case "B1":
+                    btnB1.setIcon(taken);
+                    break;
+                    case "B2":
+                    btnB2.setIcon(taken);
+                    break;
+                    case "B4":
+                    btnB4.setIcon(taken);
+                    break;
+                    case "B5":
+                    btnB5.setIcon(taken);
+                    break;
+                    case "B6":
+                    btnB6.setIcon(taken);
+                    break;
+                    case "B7":
+                    btnB7.setIcon(taken);
+                    break;
+                    case "C0":
+                    btnC0.setIcon(taken);
+                    break;
+                    case "C1":
+                    btnC1.setIcon(taken);
+                    break;
+                    case "C2":
+                    btnC2.setIcon(taken);
+                    break;
+                    case "C4":
+                    btnC4.setIcon(taken);
+                    break;
+                    case "C5":
+                    btnC5.setIcon(taken);
+                    break;
+                    case "C6":
+                    btnC6.setIcon(taken);
+                    break;
+                    case "C7":
+                    btnC7.setIcon(taken);
+                    break;
+                    case "D0":
+                    btnD0.setIcon(taken);
+                    break;
+                    case "D1":
+                    btnD1.setIcon(taken);
+                    break;
+                    case "D2":
+                    btnD2.setIcon(taken);
+                    break;
+                    case "D4":
+                    btnD4.setIcon(taken);
+                    break;
+                    case "D5":
+                    btnD5.setIcon(taken);
+                    break;
+                    case "D6":
+                    btnD6.setIcon(taken);
+                    break;
+                    case "D7":
+                    btnD7.setIcon(taken);
                     break;
             }
             

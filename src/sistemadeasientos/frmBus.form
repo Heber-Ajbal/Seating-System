@@ -569,6 +569,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnB0ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnC0">
               <Properties>
@@ -576,6 +579,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC0ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD0">
               <Properties>
@@ -583,6 +589,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD0ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnA0">
               <Properties>
@@ -660,6 +669,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnB1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnB2">
               <Properties>
@@ -667,6 +679,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnB2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnB3">
               <Properties>
@@ -674,6 +689,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnB3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnB4">
               <Properties>
@@ -681,6 +699,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnB4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnB5">
               <Properties>
@@ -688,6 +709,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnB5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnB6">
               <Properties>
@@ -715,6 +739,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC7ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnC3">
               <Properties>
@@ -732,6 +759,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnC6">
               <Properties>
@@ -739,6 +769,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC6ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnC5">
               <Properties>
@@ -746,6 +779,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnC2">
               <Properties>
@@ -753,6 +789,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnC1">
               <Properties>
@@ -760,6 +799,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD4">
               <Properties>
@@ -767,6 +809,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD2">
               <Properties>
@@ -774,6 +819,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD7">
               <Properties>
@@ -781,6 +829,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD7ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD3">
               <Properties>
@@ -788,6 +839,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD5">
               <Properties>
@@ -795,6 +849,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD1">
               <Properties>
@@ -802,6 +859,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnD6">
               <Properties>
@@ -809,6 +869,9 @@
                   <Image iconType="3" name="/sistemadeasientos/resource/A1.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD6ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
