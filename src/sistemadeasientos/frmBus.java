@@ -5,8 +5,11 @@
  */
 package sistemadeasientos;
 
+import java.util.LinkedList;
+import java.util.StringTokenizer;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import sistemadeasientos.business.Archivo;
 import sistemadeasientos.business.ListaAsientos;
 import sistemadeasientos.model.ReservacionModel;
 
@@ -27,6 +30,9 @@ public class frmBus extends javax.swing.JFrame {
     Icon taken = new ImageIcon(ClassLoader.getSystemResource("sistemadeasientos/resource/T1.png"));
     private boolean Guardar;
     private ReservacionModel rs;
+    private boolean estado;
+    private boolean Existe;
+    ReservacionModel[] reservaciones;
     
     public frmBus() {
         initComponents();
@@ -711,6 +717,7 @@ public class frmBus extends javax.swing.JFrame {
 
     private void btnA0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA0ActionPerformed
         pAsiento = ObtenerAsiento("A0");
+        VerificarDatos("A0");
         Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnA0ActionPerformed
@@ -860,7 +867,13 @@ public class frmBus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnD0ActionPerformed
 
     private void AgregarDatos(){
-        frmDatos ingresarDatos = new frmDatos(this);      
+        frmDatos ingresarDatos; 
+        if(Existe){
+            ingresarDatos = new frmDatos(this,reservaciones[0].getNombreCliente(),reservaciones[0].getPrecio(),reservaciones[0].getPocision()); 
+        }else{
+            ingresarDatos = new frmDatos(this,"",0,""); 
+        }
+             
         ingresarDatos.show();          
     }
     
@@ -891,8 +904,7 @@ public class frmBus extends javax.swing.JFrame {
             cantidad = lst.AllReservacion.length;
         }else{
             cantidad = 1;
-        }
-           
+        }         
             for(int i=0; i < cantidad; i++ ){
             String idAsientoD = Guardar ? pAsiento : lst.AllReservacion[i].getPocision();
             String test = idAsientoD;
@@ -998,6 +1010,33 @@ public class frmBus extends javax.swing.JFrame {
             
         }
         
+    }
+    
+    private void VerificarDatos(String idAsiento){
+    
+        Archivo archivo = new Archivo("asientos.txt");
+        LinkedList<String> lineas = archivo.obtenerTextoDelArchivo();
+        if (lineas != null) {
+             reservaciones = new ReservacionModel[lineas.size()]; // Crear el arreglo del tamaño adecuado
+        for (int i = 0; i < lineas.size(); i++) {
+            String linea = lineas.get(i);
+            StringTokenizer tokens = new StringTokenizer(linea, ";");
+            String nombreCliente = tokens.nextToken();
+            estado = Boolean.parseBoolean(tokens.nextToken());
+            String posicion = tokens.nextToken();
+            String Id = tokens.nextToken();
+            float precio = Float.parseFloat(tokens.nextToken());
+            
+            if(posicion.equals(idAsiento)){
+                Existe = true;
+                reservaciones[0] = new ReservacionModel(nombreCliente, estado, posicion, Id, precio);
+                break;
+            }        
+            
+            
+            
+        }
+        }
     }
     
     /**

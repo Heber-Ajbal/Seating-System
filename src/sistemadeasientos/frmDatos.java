@@ -7,13 +7,21 @@ public class frmDatos extends javax.swing.JFrame {
     
     private frmBus parentForm;
     public static String nombre;
-    public frmDatos(frmBus parent) {
+    public String posicion;
+    public float precio;
+    
+    public frmDatos(frmBus parent, String aNombre, float aPrecio,String aPosicion) {
         initComponents();
         parentForm = parent;
+        posicion = aPosicion;
+        nombre = aNombre;
+        precio = aPrecio;
+        CargarDatos();
     }
     
     public frmDatos() {
         initComponents();
+        
     }
     
 
@@ -126,6 +134,19 @@ public class frmDatos extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void CargarDatos(){
+        if(!nombre.equals("") && !posicion.equals("") && precio != 0){
+            txtNombre.setText(nombre);
+        if(posicion.contains("A") || posicion.contains("D")){
+            jLabel5.setText("VENTANA");
+        }else{
+            jLabel5.setText("PASILLO");
+        }
+        jLabel3.setText("Q"+ precio);
+        }
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
