@@ -5,7 +5,10 @@
  */
 package sistemadeasientos;
 
-import sistemadeasientos.model.BusModel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import sistemadeasientos.business.ListaAsientos;
+import sistemadeasientos.model.ReservacionModel;
 
 /**
  *
@@ -17,11 +20,16 @@ public class frmBus extends javax.swing.JFrame {
      * Creates new form frmBus
      */
     
-    private BusModel modelo;
+   
+    private String nombre;
+    private String pAsiento;
+    private float precio;
+    Icon taken = new ImageIcon(ClassLoader.getSystemResource("sistemadeasientos/resource/T1.png"));
     
     public frmBus() {
         initComponents();
-        modelo = new BusModel();
+        CambiarDisponibilidad();
+        
     }
 
     /**
@@ -52,38 +60,38 @@ public class frmBus extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
+        btnA1 = new javax.swing.JButton();
+        btnB0 = new javax.swing.JButton();
+        btnC0 = new javax.swing.JButton();
+        btnD0 = new javax.swing.JButton();
+        btnA0 = new javax.swing.JButton();
+        btnA3 = new javax.swing.JButton();
+        btnA2 = new javax.swing.JButton();
+        btnA4 = new javax.swing.JButton();
+        btnA5 = new javax.swing.JButton();
+        btnA6 = new javax.swing.JButton();
+        btnA7 = new javax.swing.JButton();
+        btnB1 = new javax.swing.JButton();
+        btnB2 = new javax.swing.JButton();
+        btnB3 = new javax.swing.JButton();
+        btnB4 = new javax.swing.JButton();
+        btnB5 = new javax.swing.JButton();
+        btnB6 = new javax.swing.JButton();
+        btnB7 = new javax.swing.JButton();
+        btnC7 = new javax.swing.JButton();
+        btnC3 = new javax.swing.JButton();
+        btnC4 = new javax.swing.JButton();
+        btnC6 = new javax.swing.JButton();
+        btnC5 = new javax.swing.JButton();
+        btnC2 = new javax.swing.JButton();
+        btnC1 = new javax.swing.JButton();
+        btnD4 = new javax.swing.JButton();
+        btnD2 = new javax.swing.JButton();
+        btnD7 = new javax.swing.JButton();
+        btnD3 = new javax.swing.JButton();
+        btnD5 = new javax.swing.JButton();
+        btnD1 = new javax.swing.JButton();
+        btnD6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -212,7 +220,7 @@ public class frmBus extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(65, 65, 65)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(367, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,228 +231,263 @@ public class frmBus extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/busb.png"))); // NOI18N
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/busA.png"))); // NOI18N
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        btnA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                btnA1ActionPerformed(evt);
             }
         });
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnD0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        btnA0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                btnA0ActionPerformed(evt);
             }
         });
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA3ActionPerformed(evt);
+            }
+        });
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA2ActionPerformed(evt);
+            }
+        });
 
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA4ActionPerformed(evt);
+            }
+        });
 
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA5ActionPerformed(evt);
+            }
+        });
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA6ActionPerformed(evt);
+            }
+        });
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnA7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnA7ActionPerformed(evt);
+            }
+        });
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnB6ActionPerformed(evt);
+            }
+        });
 
-        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnB7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+        btnC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnC6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnC5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
+
+        btnD6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemadeasientos/resource/A1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButton11)
+                                .addComponent(btnA7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton10)
+                                .addComponent(btnA6)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton9)
+                                .addComponent(btnA5)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton8)
+                                .addComponent(btnA4)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton6)
+                                .addComponent(btnA3)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton7)
+                                .addComponent(btnA2)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton1)
+                                .addComponent(btnA1)
                                 .addGap(30, 30, 30)
-                                .addComponent(jButton5))
+                                .addComponent(btnA0))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jButton18)
+                                        .addComponent(btnC6)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton17)
+                                        .addComponent(btnC5)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton16)
+                                        .addComponent(btnC4)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton15)
+                                        .addComponent(btnC3)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton14)
+                                        .addComponent(btnC2)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton13)
+                                        .addComponent(btnC1)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton12)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton2))
+                                        .addComponent(btnC0))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jButton22)
+                                        .addComponent(btnD6)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton23)
+                                        .addComponent(btnD5)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton21)
+                                        .addComponent(btnD4)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton20)
+                                        .addComponent(btnD3)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton24)
+                                        .addComponent(btnD2)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton25)
+                                        .addComponent(btnD1)
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton3))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jButton32)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton30)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton26)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton29)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton27)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton31)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jButton4)))))
+                                        .addComponent(btnD0))))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(btnB7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnB6)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnB5)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnB4)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnB3)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnB2)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnB1)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnB0)))
                         .addGap(10, 10, 10)
                         .addComponent(jLabel10)
                         .addGap(42, 42, 42))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton28)
-                            .addComponent(jButton19))
+                            .addComponent(btnD7)
+                            .addComponent(btnC7))
                         .addGap(30, 30, 30))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel9)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
+                        .addGap(159, 159, 159)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton1)
-                                            .addComponent(jButton5)
-                                            .addComponent(jButton6)
-                                            .addComponent(jButton7)
-                                            .addComponent(jButton9)
-                                            .addComponent(jButton8)
-                                            .addComponent(jButton10))
+                                            .addComponent(btnA1)
+                                            .addComponent(btnA0)
+                                            .addComponent(btnA3)
+                                            .addComponent(btnA2)
+                                            .addComponent(btnA5)
+                                            .addComponent(btnA4)
+                                            .addComponent(btnA6))
                                         .addGap(10, 10, 10)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton2)
-                                            .addComponent(jButton12)))
+                                            .addComponent(btnB0)
+                                            .addComponent(btnB1)))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jButton11)
+                                        .addComponent(btnA7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton14)
-                                            .addComponent(jButton13)
-                                            .addComponent(jButton16)
-                                            .addComponent(jButton15)
-                                            .addComponent(jButton18)
-                                            .addComponent(jButton17))))
+                                            .addComponent(btnB3)
+                                            .addComponent(btnB2)
+                                            .addComponent(btnB5)
+                                            .addComponent(btnB4)
+                                            .addComponent(btnB7)
+                                            .addComponent(btnB6))))
                                 .addGap(20, 20, 20)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton3)
-                                    .addComponent(jButton25)
-                                    .addComponent(jButton19)))
+                                    .addComponent(btnC0)
+                                    .addComponent(btnC1)
+                                    .addComponent(btnC7)))
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton20)
-                                .addComponent(jButton24)
-                                .addComponent(jButton23)
-                                .addComponent(jButton21)
-                                .addComponent(jButton22)))
+                                .addComponent(btnC3)
+                                .addComponent(btnC2)
+                                .addComponent(btnC5)
+                                .addComponent(btnC4)
+                                .addComponent(btnC6)))
                         .addGap(5, 5, 5)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4)
+                            .addComponent(btnD0)
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton31)
-                                .addComponent(jButton29)
-                                .addComponent(jButton27)
-                                .addComponent(jButton30)
-                                .addComponent(jButton26)
-                                .addComponent(jButton28)
-                                .addComponent(jButton32)))))
-                .addGap(29, 29, 29))
+                                .addComponent(btnD1)
+                                .addComponent(btnD3)
+                                .addComponent(btnD2)
+                                .addComponent(btnD5)
+                                .addComponent(btnD4)
+                                .addComponent(btnD7)
+                                .addComponent(btnD6))))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -452,31 +495,109 @@ public class frmBus extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(55, 55, 55))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    private void btnA7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA7ActionPerformed
+        pAsiento = ObtenerAsiento("A7");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA7ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    private void btnB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB6ActionPerformed
+        pAsiento = ObtenerAsiento("B6");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnB6ActionPerformed
 
+    private void btnA0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA0ActionPerformed
+        pAsiento = ObtenerAsiento("A0");
+        AgregarDatos();     
+    }//GEN-LAST:event_btnA0ActionPerformed
+
+    private void btnA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA1ActionPerformed
+        pAsiento = ObtenerAsiento("A1");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA1ActionPerformed
+
+    private void btnA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA2ActionPerformed
+        pAsiento = ObtenerAsiento("A2");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA2ActionPerformed
+
+    private void btnA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA3ActionPerformed
+        pAsiento = ObtenerAsiento("A3");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA3ActionPerformed
+
+    private void btnA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA4ActionPerformed
+        pAsiento = ObtenerAsiento("A4");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA4ActionPerformed
+
+    private void btnA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA5ActionPerformed
+        pAsiento = ObtenerAsiento("A5");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA5ActionPerformed
+
+    private void btnA6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnA6ActionPerformed
+        pAsiento = ObtenerAsiento("A6");
+        AgregarDatos(); 
+    }//GEN-LAST:event_btnA6ActionPerformed
+
+    private void AgregarDatos(){
+        frmDatos ingresarDatos = new frmDatos(this);      
+        ingresarDatos.show();          
+    }
+    
+    private String ObtenerAsiento(String idAsiento){
+        if(idAsiento.contains("A") || idAsiento.contains("C")){
+            precio = 10;
+        }else{
+             precio = 5;
+        }
+        return idAsiento;
+    }
+    
+    public void EnviarDatos(String nombreC){
+        nombre = nombreC;
+        System.out.println(nombreC);        
+        ReservacionModel reservacion = new ReservacionModel(nombreC, false, pAsiento, pAsiento,precio );
+        ListaAsientos lst = new ListaAsientos();
+        lst.Agregar(reservacion);
+        lst.GuardarArchivo();
+    }
+    
+    private void CambiarDisponibilidad(){
+        ListaAsientos lst = new ListaAsientos();
+        lst.cargarProductos();
+        
+        for(int i=0; i < lst.AllReservacion.length; i++ ){
+            String idAsientoD = lst.AllReservacion[i].getPocision();
+            String test = idAsientoD;
+            
+            switch(idAsientoD){
+            
+                case "A0":
+                    btnA0.setIcon(taken);
+                    break;
+            }
+            
+        }
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -513,38 +634,38 @@ public class frmBus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btnA0;
+    private javax.swing.JButton btnA1;
+    private javax.swing.JButton btnA2;
+    private javax.swing.JButton btnA3;
+    private javax.swing.JButton btnA4;
+    private javax.swing.JButton btnA5;
+    private javax.swing.JButton btnA6;
+    private javax.swing.JButton btnA7;
+    private javax.swing.JButton btnB0;
+    private javax.swing.JButton btnB1;
+    private javax.swing.JButton btnB2;
+    private javax.swing.JButton btnB3;
+    private javax.swing.JButton btnB4;
+    private javax.swing.JButton btnB5;
+    private javax.swing.JButton btnB6;
+    private javax.swing.JButton btnB7;
+    private javax.swing.JButton btnC0;
+    private javax.swing.JButton btnC1;
+    private javax.swing.JButton btnC2;
+    private javax.swing.JButton btnC3;
+    private javax.swing.JButton btnC4;
+    private javax.swing.JButton btnC5;
+    private javax.swing.JButton btnC6;
+    private javax.swing.JButton btnC7;
+    private javax.swing.JButton btnD0;
+    private javax.swing.JButton btnD1;
+    private javax.swing.JButton btnD2;
+    private javax.swing.JButton btnD3;
+    private javax.swing.JButton btnD4;
+    private javax.swing.JButton btnD5;
+    private javax.swing.JButton btnD6;
+    private javax.swing.JButton btnD7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

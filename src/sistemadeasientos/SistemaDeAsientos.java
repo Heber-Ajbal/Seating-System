@@ -23,11 +23,8 @@ public class SistemaDeAsientos extends Application {
     @Override
     public void start(Stage primaryStage) {   
         ListaAsientos lst = new ListaAsientos();
-        lst.cargarProductos();
-        lst.Imprimir();
-        
-        frmBus bus = new frmBus();
-        
+        lst.cargarProductos();      
+        frmBus bus = new frmBus();      
         bus.show();
         
     }

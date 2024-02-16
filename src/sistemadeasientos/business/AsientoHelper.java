@@ -14,26 +14,6 @@ import sistemadeasientos.model.ReservacionModel;
  * @author Heber
  */
 public class AsientoHelper {
-    /*public LinkedList<ReservacionModel> obtener(){
-         LinkedList<ReservacionModel> reservacion=null;
-        Archivo archivo=new Archivo("asientos.txt");
-        LinkedList<String> lineas=archivo.obtenerTextoDelArchivo();
-        if(lineas!=null){
-            reservacion=new LinkedList();
-            for(int i=0;i<lineas.size();i++){
-                String linea=lineas.get(i);
-                StringTokenizer tokens=new StringTokenizer(linea,";");
-                String nombreCliente=tokens.nextToken();
-                boolean disponible=  Boolean.parseBoolean(tokens.nextToken());
-                String posicion=tokens.nextToken();
-                String Id=tokens.nextToken();
-                float precio=Float.parseFloat(tokens.nextToken());                
-                reservacion.add(new ReservacionModel(nombreCliente,disponible,posicion,Id, precio));
-            }
-        }
-        return reservacion;
-        
-    }*/
     
     public ReservacionModel[] obtener() {
     ReservacionModel[] reservaciones = null;
@@ -54,4 +34,19 @@ public class AsientoHelper {
     }
     return reservaciones;
 }
+    
+    public boolean registrarProducto(ReservacionModel r){
+        Archivo archivo=new Archivo("asientos.txt");
+        return archivo.registrar(r.getNombreCliente()+";"
+               + r.isDisponible()+ ";"
+               + r.getPocision()+ ";"
+               + r.getId()+ ";" + r.getPrecio());
+    }
+    
+    
+    public boolean borrarTodo(){
+        Archivo archivo=new Archivo("productos.txt");
+        return archivo.borrarContenido();                
+    }
+    
 }

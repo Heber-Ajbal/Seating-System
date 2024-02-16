@@ -14,19 +14,21 @@ import sistemadeasientos.model.ReservacionModel;
 public class ListaAsientos {
     
     ReservacionModel[] ListaReservacion = new ReservacionModel[32];
-    
+    public  ReservacionModel[] AllReservacion;
     public void Agregar(ReservacionModel reservacion){
         ListaReservacion[0] = reservacion;
     }
     
     public void cargarProductos(){
         AsientoHelper bd=new AsientoHelper();
-        ListaReservacion=bd.obtener();        
+        ListaReservacion=bd.obtener();     
+        AllReservacion = ListaReservacion;
     }
     
-    public void Imprimir(){
-        for(int i=0; i<ListaReservacion.length;i++){
-            System.out.println(ListaReservacion[i].getNombreCliente());
-        }
+    public void GuardarArchivo(){
+        AsientoHelper bd=new AsientoHelper();
+        bd.registrarProducto(ListaReservacion[0]);
     }
+    
+    
 }

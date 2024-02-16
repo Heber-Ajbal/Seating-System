@@ -3,15 +3,21 @@ package sistemadeasientos.business;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  *
@@ -47,41 +53,34 @@ public class Archivo {
         return lineasDeTexto;
     }
     
-    private File obtenerArchivoa() {       
-        try {
-            URL url = getClass().getClassLoader().getResource("sistemadeasientos/resource/archivos/asientos.txt");
-            return new File(url.toURI());            
-        } catch (URISyntaxException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
-    
     private File obtenerArchivo() {
-        // Obtener el InputStream del recurso
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("sistemadeasientos/resource/archivos/asientos.txt");
-        if (inputStream != null) {
-            // Crear un archivo temporal para copiar el contenido del InputStream
-            File tempFile;
-            try {
-                tempFile = File.createTempFile("asientos", ".txt");
-                tempFile.deleteOnExit(); // Eliminar el archivo temporal al salir del programa
-                // Copiar el contenido del InputStream al archivo temporal
-                java.nio.file.Files.copy(inputStream, tempFile.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING);
-                return tempFile;
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
-        } else {
-            System.out.println("No se pudo encontrar el archivo en la ruta especificada.");
+    // Obtener el InputStream del recurso
+    InputStream inputStream = getClass().getClassLoader().getResourceAsStream("sistemadeasientos/resource/asientos.txt");
+    if (inputStream != null) {
+        // Especificar la ruta de destino del archivo
+        String rutaDestino = "D:\\Heber\\Documents\\Proyectos Java\\SistemaDeAsientos\\src\\sistemadeasientos\\resource\\asientos.txt"; // Reemplaza con tu ruta deseada
+        
+        try {
+            // Crear un nuevo archivo en la ruta de destino
+            Path archivoDestino = Paths.get(rutaDestino);
+            Files.copy(inputStream, archivoDestino, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            
+            // Convertir el archivo a tipo File y devolverlo
+            return archivoDestino.toFile();
+        } catch (IOException e) {
+            e.printStackTrace();
             return null;
         }
+    } else {
+        System.out.println("No se pudo encontrar el archivo en la ruta especificada.");
+        return null;
     }
+}
+    
     
     public boolean registrar(String linea){
         File archivo=obtenerArchivo();
-        try{
+    try{
             if(archivo.exists()){
                 FileWriter fw=new FileWriter(archivo,true);
                 BufferedWriter bw=new BufferedWriter(fw);
