@@ -5,6 +5,11 @@
  */
 package sistemadeasientos;
 
+import java.awt.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 import javax.swing.Icon;
@@ -1012,6 +1017,7 @@ public class frmBus extends javax.swing.JFrame {
                     btnD7.setIcon(aviable);
                     break;
             }
+         Existe = false;
     }
     
     private String ObtenerAsiento(String idAsiento){
@@ -1149,7 +1155,7 @@ public class frmBus extends javax.swing.JFrame {
         
     }
     
-    private void VerificarDatos(String idAsiento){
+    private void VerificarDatosd(String idAsiento){
     
         Archivo archivo = new Archivo("asientos.txt");
         LinkedList<String> lineas = archivo.obtenerTextoDelArchivo();
@@ -1168,11 +1174,34 @@ public class frmBus extends javax.swing.JFrame {
                 Existe = true;
                 reservaciones[0] = new ReservacionModel(nombreCliente, estado, posicion, Id, precio);
                 break;
-            }        
-            
-            
-            
+            }                           
         }
+        }
+    }
+    
+     private void VerificarDatos(String idAsiento){
+    
+        
+        String rutaArchivo = "D:\\Heber\\Documents\\github\\Seating-System\\src\\sistemadeasientos\\resource\\asientos.txt";
+        try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
+            String linea;
+            reservaciones = new ReservacionModel[2];
+            while ((linea = br.readLine()) != null) {             
+            StringTokenizer tokens = new StringTokenizer(linea, ";");
+            String nombreCliente = tokens.nextToken();
+            estado = Boolean.parseBoolean(tokens.nextToken());
+            String posicion = tokens.nextToken();
+            String Id = tokens.nextToken();
+            float precio = Float.parseFloat(tokens.nextToken());
+            
+                if(posicion.equals(idAsiento)){
+                    Existe = true;
+                    reservaciones[0] = new ReservacionModel(nombreCliente, estado, posicion, Id, precio);
+                break;
+            }         
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     
