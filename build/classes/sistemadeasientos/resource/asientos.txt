@@ -1,3 +1,1 @@
 Edith;false;C4;C4;10.0
-Diego;false;C3;C3;10.0
-Holaaaaa;false;C3;C3;10.0
