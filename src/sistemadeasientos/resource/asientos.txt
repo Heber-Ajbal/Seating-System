@@ -1,5 +1,3 @@
-david;false;B0;B0;5.0
-asdf;false;A0;A0;10.0
 Edith;false;C4;C4;10.0
 Diego;false;C3;C3;10.0
 pruebass;false;C2;C2;10.0

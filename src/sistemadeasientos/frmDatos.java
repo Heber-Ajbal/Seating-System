@@ -1,6 +1,13 @@
 
 package sistemadeasientos;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class frmDatos extends javax.swing.JFrame {
 
@@ -9,6 +16,7 @@ public class frmDatos extends javax.swing.JFrame {
     public static String nombre;
     public String posicion;
     public float precio;
+    private boolean ocupado;
     
     public frmDatos(frmBus parent, String aNombre, float aPrecio,String aPosicion) {
         initComponents();
@@ -120,29 +128,75 @@ public class frmDatos extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        nombre = txtNombre.getText();
-        
-        parentForm.EnviarDatos(nombre);
-        this.dispose();
-        
+        if(ocupado){
+            eliminarReserva();
+            parentForm.EliminarDato(posicion);
+        }else{
+           nombre = txtNombre.getText();
+        parentForm.EnviarDatos(nombre);      
+        }
+        this.dispose(); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void eliminarReserva(){
+       // Obtener la ruta del archivo de entrada y el nombre del archivo
+       String archivoEntrada = "D:\\Heber\\Documents\\github\\Seating-System\\src\\sistemadeasientos\\resource\\asientos.txt";
+        File archivo = new File(archivoEntrada);
+        String directorio = archivo.getParent();
+        String nombreArchivo = archivo.getName();
+
+        // Crear la ruta para el archivo de salida
+        String rutaArchivoSalida = directorio + File.separator + "temp_" + nombreArchivo;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoEntrada));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(rutaArchivoSalida))) {
+
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                if (!linea.contains(posicion)) {
+                    bw.write(linea);
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Eliminar el archivo original y renombrar el archivo de salida
+        File archivoSalida = new File(rutaArchivoSalida);
+        archivo.delete();
+        archivoSalida.renameTo(new File(directorio + File.separator + nombreArchivo));
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void CargarDatos(){
-        if(!nombre.equals("") && !posicion.equals("") && precio != 0){
-            txtNombre.setText(nombre);
+        
+        
         if(posicion.contains("A") || posicion.contains("D")){
             jLabel5.setText("VENTANA");
+            jLabel3.setText("Q"+ 5.00);
+            
         }else{
             jLabel5.setText("PASILLO");
+            jLabel3.setText("Q"+ 10.00);
         }
-        jLabel3.setText("Q"+ precio);
+        
+        if(!nombre.equals("") && precio != 0){
+            txtNombre.setText(nombre);      
+            jLabel3.setText("Q"+ precio);
+            jButton1.setText("Cancelar Reservacion");
+            jButton2.setText("Cerrar");
+            ocupado = true;
+            txtNombre.setEditable(false);
+        }else{
+            ocupado = false;
         }
         
     }
