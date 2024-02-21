@@ -1,4 +1,3 @@
-
 package sistemadeasientos;
 
 import javafx.application.Application;
@@ -11,19 +10,21 @@ import javafx.stage.Stage;
 import sistemadeasientos.business.ListaAsientos;
 
 public class SistemaDeAsientos extends Application {
-    
+
     @Override
-    public void start(Stage primaryStage) {   
+    public void start(Stage primaryStage) {
+        // Crear una nueva lista de asientos
         ListaAsientos lst = new ListaAsientos();
-        lst.cargarProductos();      
-        frmBus bus = new frmBus();      
-        bus.show();
-        
+        // Cargar los productos en la lista de asientos
+        lst.cargarProductos();
+        // Crear una nueva instancia del formulario del bus
+        frmBus bus = new frmBus();
+        // Mostrar la ventana del formulario del bus
+        bus.show();   
     }
 
-    
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

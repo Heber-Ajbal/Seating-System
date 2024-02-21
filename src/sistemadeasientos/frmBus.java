@@ -27,8 +27,6 @@ public class frmBus extends javax.swing.JFrame {
     /**
      * Creates new form frmBus
      */
-    
-   
     private String nombre;
     private String pAsiento;
     private float precio;
@@ -39,11 +37,11 @@ public class frmBus extends javax.swing.JFrame {
     private boolean estado;
     private boolean Existe;
     ReservacionModel[] reservaciones;
-    
+
     public frmBus() {
         initComponents();
         CambiarDisponibilidad();
-        
+
     }
 
     /**
@@ -683,7 +681,7 @@ public class frmBus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB6ActionPerformed
-        pAsiento = ObtenerAsiento("B6");  
+        pAsiento = ObtenerAsiento("B6");
         VerificarDatos("B6");
         Guardar = true;
         AgregarDatos();
@@ -755,13 +753,13 @@ public class frmBus extends javax.swing.JFrame {
     private void btnB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB7ActionPerformed
         pAsiento = ObtenerAsiento("B7");
         VerificarDatos("B7");
-        Guardar = true;        
+        Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB7ActionPerformed
 
     private void btnC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC7ActionPerformed
-       pAsiento = ObtenerAsiento("C7");
-       VerificarDatos("C7");
+        pAsiento = ObtenerAsiento("C7");
+        VerificarDatos("C7");
         Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnC7ActionPerformed
@@ -788,8 +786,8 @@ public class frmBus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnD6ActionPerformed
 
     private void btnB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB5ActionPerformed
-       pAsiento = ObtenerAsiento("B5");
-       VerificarDatos("B5");
+        pAsiento = ObtenerAsiento("B5");
+        VerificarDatos("B5");
         Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB5ActionPerformed
@@ -823,8 +821,8 @@ public class frmBus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnC4ActionPerformed
 
     private void btnD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD4ActionPerformed
-      pAsiento = ObtenerAsiento("D4");
-      VerificarDatos("D4");
+        pAsiento = ObtenerAsiento("D4");
+        VerificarDatos("D4");
         Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD4ActionPerformed
@@ -865,8 +863,8 @@ public class frmBus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnD2ActionPerformed
 
     private void btnB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnB1ActionPerformed
-       pAsiento = ObtenerAsiento("B1");
-       VerificarDatos("B1");
+        pAsiento = ObtenerAsiento("B1");
+        VerificarDatos("B1");
         Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnB1ActionPerformed
@@ -900,311 +898,361 @@ public class frmBus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnC0ActionPerformed
 
     private void btnD0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnD0ActionPerformed
-       pAsiento = ObtenerAsiento("D0");
-       VerificarDatos("D0");
+        pAsiento = ObtenerAsiento("D0");
+        VerificarDatos("D0");
         Guardar = true;
         AgregarDatos();
     }//GEN-LAST:event_btnD0ActionPerformed
 
-    private void AgregarDatos(){
-        frmDatos ingresarDatos; 
-        if(Existe){
-            ingresarDatos = new frmDatos(this,reservaciones[0].getNombreCliente(),reservaciones[0].getPrecio(),reservaciones[0].getPocision()); 
-        }else{
-            ingresarDatos = new frmDatos(this,"",0,pAsiento); 
+    /**
+     * Este método se encarga de abrir una ventana para ingresar datos. Si ya
+     * existe una reserva, se muestran los datos de esa reserva en la ventana.
+     * Si no existe una reserva, se muestra una ventana para ingresar nuevos
+     * datos.
+     */
+    private void AgregarDatos() {
+        frmDatos ingresarDatos;
+        // Si ya existe una reserva
+        if (Existe) {
+            // Crear una instancia de frmDatos con los datos de la primera reserva
+            ingresarDatos = new frmDatos(this, reservaciones[0].getNombreCliente(), reservaciones[0].getPrecio(), reservaciones[0].getPocision());
+        } else {
+            // Crear una instancia de frmDatos con valores predeterminados para una nueva reserva
+            ingresarDatos = new frmDatos(this, "", 0, pAsiento);
         }
-             
-        ingresarDatos.show();        
+        // Mostrar la ventana para ingresar datos
+        ingresarDatos.show();
+        // Resetear la bandera de Existe a false para la próxima ejecución
         Existe = false;
     }
-    
-    public void EliminarDato(String idAsientoD){
-         switch(idAsientoD){       
-                case "A0":
-                    btnA0.setIcon(aviable);
-                    break;
-                    case "A1":
-                    btnA1.setIcon(aviable);
-                    break;
-                    case "A2":
-                    btnA2.setIcon(aviable);
-                    break;
-                    case "A3":
-                    btnA3.setIcon(aviable);
-                    break;
-                    case "A4":
-                    btnA4.setIcon(aviable);
-                    break;
-                    case "A5":
-                    btnA5.setIcon(aviable);
-                    break;
-                    case "A6":
-                    btnA6.setIcon(aviable);
-                    break;
-                    case "A7":
-                    btnA7.setIcon(aviable);
-                    break;
-                    case "B0":
-                    btnB0.setIcon(aviable);
-                    break;
-                    case "B1":
-                    btnB1.setIcon(aviable);
-                    break;
-                    case "B2":
-                    btnB2.setIcon(aviable);
-                    break;
-                    case "B3":
-                    btnB2.setIcon(aviable);
-                    break;
-                    case "B4":
-                    btnB4.setIcon(aviable);
-                    break;
-                    case "B5":
-                    btnB5.setIcon(aviable);
-                    break;
-                    case "B6":
-                    btnB6.setIcon(aviable);
-                    break;
-                    case "B7":
-                    btnB7.setIcon(aviable);
-                    break;
-                    case "C0":
-                    btnC0.setIcon(aviable);
-                    break;
-                    case "C1":
-                    btnC1.setIcon(aviable);
-                    break;
-                    case "C2":
-                    btnC2.setIcon(aviable);
-                    break;
-                    case "C3":
-                    btnC3.setIcon(aviable);
-                    break;
-                    case "C4":
-                    btnC4.setIcon(aviable);
-                    break;
-                    case "C5":
-                    btnC5.setIcon(aviable);
-                    break;
-                    case "C6":
-                    btnC6.setIcon(aviable);
-                    break;
-                    case "C7":
-                    btnC7.setIcon(aviable);
-                    break;
-                    case "D0":
-                    btnD0.setIcon(aviable);
-                    break;
-                    case "D1":
-                    btnD1.setIcon(aviable);
-                    break;
-                    case "D2":
-                    btnD2.setIcon(aviable);
-                    break;
-                    case "D3":
-                    btnD2.setIcon(aviable);
-                    break;
-                    case "D4":
-                    btnD4.setIcon(aviable);
-                    break;
-                    case "D5":
-                    btnD5.setIcon(aviable);
-                    break;
-                    case "D6":
-                    btnD6.setIcon(aviable);
-                    break;
-                    case "D7":
-                    btnD7.setIcon(aviable);
-                    break;
-            }
-         Existe = false;
-    }
-    
-    private String ObtenerAsiento(String idAsiento){
-        if(idAsiento.contains("A") || idAsiento.contains("C")){
-            precio = 10;
-        }else{
-             precio = 5;
+
+    /**
+     * Este método se encarga de eliminar un dato de un asiento específico y
+     * restablecer su estado a disponible en la interfaz gráfica.
+     *
+     * @param idAsientoD El identificador del asiento que se va a eliminar.
+     */
+    public void EliminarDato(String idAsientoD) {
+        switch (idAsientoD) {
+            case "A0":
+                btnA0.setIcon(aviable);
+                break;
+            case "A1":
+                btnA1.setIcon(aviable);
+                break;
+            case "A2":
+                btnA2.setIcon(aviable);
+                break;
+            case "A3":
+                btnA3.setIcon(aviable);
+                break;
+            case "A4":
+                btnA4.setIcon(aviable);
+                break;
+            case "A5":
+                btnA5.setIcon(aviable);
+                break;
+            case "A6":
+                btnA6.setIcon(aviable);
+                break;
+            case "A7":
+                btnA7.setIcon(aviable);
+                break;
+            case "B0":
+                btnB0.setIcon(aviable);
+                break;
+            case "B1":
+                btnB1.setIcon(aviable);
+                break;
+            case "B2":
+                btnB2.setIcon(aviable);
+                break;
+            case "B3":
+                btnB3.setIcon(aviable);
+                break;
+            case "B4":
+                btnB4.setIcon(aviable);
+                break;
+            case "B5":
+                btnB5.setIcon(aviable);
+                break;
+            case "B6":
+                btnB6.setIcon(aviable);
+                break;
+            case "B7":
+                btnB7.setIcon(aviable);
+                break;
+            case "C0":
+                btnC0.setIcon(aviable);
+                break;
+            case "C1":
+                btnC1.setIcon(aviable);
+                break;
+            case "C2":
+                btnC2.setIcon(aviable);
+                break;
+            case "C3":
+                btnC3.setIcon(aviable);
+                break;
+            case "C4":
+                btnC4.setIcon(aviable);
+                break;
+            case "C5":
+                btnC5.setIcon(aviable);
+                break;
+            case "C6":
+                btnC6.setIcon(aviable);
+                break;
+            case "C7":
+                btnC7.setIcon(aviable);
+                break;
+            case "D0":
+                btnD0.setIcon(aviable);
+                break;
+            case "D1":
+                btnD1.setIcon(aviable);
+                break;
+            case "D2":
+                btnD2.setIcon(aviable);
+                break;
+            case "D3":
+                btnD2.setIcon(aviable);
+                break;
+            case "D4":
+                btnD4.setIcon(aviable);
+                break;
+            case "D5":
+                btnD5.setIcon(aviable);
+                break;
+            case "D6":
+                btnD6.setIcon(aviable);
+                break;
+            case "D7":
+                btnD7.setIcon(aviable);
+                break;
         }
+        // Resetear la bandera de Existe a false para la próxima ejecución
+        Existe = false;
+    }
+
+    /**
+     * Este método devuelve el precio de un asiento y actualiza la variable de
+     * precio según el tipo de asiento.
+     *
+     * @param idAsiento El identificador del asiento del que se desea obtener el
+     * precio.
+     * @return El identificador del asiento.
+     */
+    private String ObtenerAsiento(String idAsiento) {
+        // Si el identificador de asiento contiene "A" o "C", el precio es 10; de lo contrario, el precio es 5.
+        if (idAsiento.contains("A") || idAsiento.contains("C")) {
+            precio = 10;
+        } else {
+            precio = 5;
+        }
+        // Devuelve el identificador del asiento.
         return idAsiento;
     }
-    
-    public void EnviarDatos(String nombreC){
+
+    /**
+     * Este método se encarga de enviar los datos de una reserva.
+     *
+     * @param nombreC El nombre del cliente para la reserva.
+     */
+    public void EnviarDatos(String nombreC) {
+        // Almacena el nombre del cliente en la variable de clase nombre.
         nombre = nombreC;
-        System.out.println(nombreC);        
-        ReservacionModel reservacion = new ReservacionModel(nombreC, false, pAsiento, pAsiento,precio );
+        // Crea una instancia de ReservacionModel con los datos de la reserva.
+        ReservacionModel reservacion = new ReservacionModel(nombreC, false, pAsiento, pAsiento, precio);
+        // Crea una instancia de ListaAsientos.
         ListaAsientos lst = new ListaAsientos();
+        // Agrega la reserva a la lista de asientos.
         lst.Agregar(reservacion);
+        // Guarda los cambios en el archivo de reservaciones.
         lst.GuardarArchivo();
+        // Cambia la disponibilidad del asiento.
         CambiarDisponibilidad();
     }
-    
-    private void CambiarDisponibilidad(){
+
+    /**
+     * Este método se encarga de cambiar la disponibilidad de los asientos en la
+     * interfaz gráfica.
+     *
+     * Si Guardar es falso, carga los productos y obtiene la cantidad de
+     * reservaciones. Para cada reservación, obtiene el identificador del
+     * asiento. Luego, cambia la disponibilidad del asiento correspondiente en
+     * la interfaz gráfica.
+     *
+     * Si Guardar es verdadero, cambia la disponibilidad del asiento actual en
+     * la interfaz gráfica.
+     */
+    private void CambiarDisponibilidad() {
+        // Crear una instancia de ListaAsientos
         ListaAsientos lst = new ListaAsientos();
         int cantidad;
-        if(!Guardar){
+
+        // Si no se guarda la reserva
+        if (!Guardar) {
+            // Cargar los productos y obtener la cantidad de reservaciones
             lst.cargarProductos();
             cantidad = lst.AllReservacion.length;
-        }else{
+        } else {
+            // Si se guarda la reserva, establecer la cantidad en 1, ya que es la que se ha seleccionado en la interfaz
             cantidad = 1;
-        }         
-            for(int i=0; i < cantidad; i++ ){
+        }
+
+        // Iterar sobre cada reservación
+        for (int i = 0; i < cantidad; i++) {
             String idAsientoD = Guardar ? pAsiento : lst.AllReservacion[i].getPocision();
             String test = idAsientoD;
-            
-            switch(idAsientoD){       
+
+            switch (idAsientoD) {
                 case "A0":
                     btnA0.setIcon(taken);
                     break;
-                    case "A1":
+                case "A1":
                     btnA1.setIcon(taken);
                     break;
-                    case "A2":
+                case "A2":
                     btnA2.setIcon(taken);
                     break;
-                    case "A3":
+                case "A3":
                     btnA3.setIcon(taken);
                     break;
-                    case "A4":
+                case "A4":
                     btnA4.setIcon(taken);
                     break;
-                    case "A5":
+                case "A5":
                     btnA5.setIcon(taken);
                     break;
-                    case "A6":
+                case "A6":
                     btnA6.setIcon(taken);
                     break;
-                    case "A7":
+                case "A7":
                     btnA7.setIcon(taken);
                     break;
-                    case "B0":
+                case "B0":
                     btnB0.setIcon(taken);
                     break;
-                    case "B1":
+                case "B1":
                     btnB1.setIcon(taken);
                     break;
-                    case "B2":
+                case "B2":
                     btnB2.setIcon(taken);
                     break;
-                    case "B3":
-                    btnB2.setIcon(taken);
+                case "B3":
+                    btnB3.setIcon(taken);
                     break;
-                    case "B4":
+                case "B4":
                     btnB4.setIcon(taken);
                     break;
-                    case "B5":
+                case "B5":
                     btnB5.setIcon(taken);
                     break;
-                    case "B6":
+                case "B6":
                     btnB6.setIcon(taken);
                     break;
-                    case "B7":
+                case "B7":
                     btnB7.setIcon(taken);
                     break;
-                    case "C0":
+                case "C0":
                     btnC0.setIcon(taken);
                     break;
-                    case "C1":
+                case "C1":
                     btnC1.setIcon(taken);
                     break;
-                    case "C2":
+                case "C2":
                     btnC2.setIcon(taken);
                     break;
-                    case "C3":
+                case "C3":
                     btnC3.setIcon(taken);
                     break;
-                    case "C4":
+                case "C4":
                     btnC4.setIcon(taken);
                     break;
-                    case "C5":
+                case "C5":
                     btnC5.setIcon(taken);
                     break;
-                    case "C6":
+                case "C6":
                     btnC6.setIcon(taken);
                     break;
-                    case "C7":
+                case "C7":
                     btnC7.setIcon(taken);
                     break;
-                    case "D0":
+                case "D0":
                     btnD0.setIcon(taken);
                     break;
-                    case "D1":
+                case "D1":
                     btnD1.setIcon(taken);
                     break;
-                    case "D2":
+                case "D2":
                     btnD2.setIcon(taken);
                     break;
-                    case "D3":
+                case "D3":
                     btnD2.setIcon(taken);
                     break;
-                    case "D4":
+                case "D4":
                     btnD4.setIcon(taken);
                     break;
-                    case "D5":
+                case "D5":
                     btnD5.setIcon(taken);
                     break;
-                    case "D6":
+                case "D6":
                     btnD6.setIcon(taken);
                     break;
-                    case "D7":
+                case "D7":
                     btnD7.setIcon(taken);
                     break;
             }
-            
+
         }
-        
+
     }
-    
-    private void VerificarDatosd(String idAsiento){
-    
-        Archivo archivo = new Archivo("asientos.txt");
-        LinkedList<String> lineas = archivo.obtenerTextoDelArchivo();
-        if (lineas != null) {
-             reservaciones = new ReservacionModel[lineas.size()]; // Crear el arreglo del tamaño adecuado
-        for (int i = 0; i < lineas.size(); i++) {
-            String linea = lineas.get(i);
-            StringTokenizer tokens = new StringTokenizer(linea, ";");
-            String nombreCliente = tokens.nextToken();
-            estado = Boolean.parseBoolean(tokens.nextToken());
-            String posicion = tokens.nextToken();
-            String Id = tokens.nextToken();
-            float precio = Float.parseFloat(tokens.nextToken());
-            
-            if(posicion.equals(idAsiento)){
-                Existe = true;
-                reservaciones[0] = new ReservacionModel(nombreCliente, estado, posicion, Id, precio);
-                break;
-            }                           
-        }
-        }
-    }
-    
-     private void VerificarDatos(String idAsiento){
-    
+
+    /**
+     * Este método verifica si hay datos asociados a un asiento en un archivo de
+     * texto. Si encuentra datos para el asiento especificado, actualiza la
+     * variable 'Existe' a true y almacena la información de la reserva en el
+     * arreglo 'reservaciones'.
+     *
+     * @param idAsiento El identificador del asiento que se desea verificar.
+     */
+    private void VerificarDatos(String idAsiento) {
+        // Ruta del archivo que contiene los datos de los asientos
         
+        //NOTA IMPORTANTE:CAMBIAR A SU RUTA DONDE GUARDO EL PROYECTO
         String rutaArchivo = "D:\\Heber\\Documents\\github\\Seating-System\\src\\sistemadeasientos\\resource\\asientos.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
-            reservaciones = new ReservacionModel[2];
-            while ((linea = br.readLine()) != null) {             
-            StringTokenizer tokens = new StringTokenizer(linea, ";");
-            String nombreCliente = tokens.nextToken();
-            estado = Boolean.parseBoolean(tokens.nextToken());
-            String posicion = tokens.nextToken();
-            String Id = tokens.nextToken();
-            float precio = Float.parseFloat(tokens.nextToken());
-            
-                if(posicion.equals(idAsiento)){
+            // Crear un arreglo para almacenar las reservaciones
+            reservaciones = new ReservacionModel[2]; // Tamaño fijo de 2 para reservaciones
+            // Leer cada línea del archivo
+            while ((linea = br.readLine()) != null) {
+                // Dividir la línea en tokens usando ';' como delimitador
+                StringTokenizer tokens = new StringTokenizer(linea, ";");
+                // Obtener los datos de la reserva
+                String nombreCliente = tokens.nextToken();
+                estado = Boolean.parseBoolean(tokens.nextToken());
+                String posicion = tokens.nextToken();
+                String Id = tokens.nextToken();
+                float precio = Float.parseFloat(tokens.nextToken());
+
+                // Si la posición de la reserva coincide con el asiento que se está verificando
+                if (posicion.equals(idAsiento)) {
+                    // Actualizar la variable 'Existe' a true
                     Existe = true;
+                    // Almacenar la reserva en el arreglo 'reservaciones'
                     reservaciones[0] = new ReservacionModel(nombreCliente, estado, posicion, Id, precio);
-                break;
-            }         
+                    // Salir del bucle ya que se ha encontrado la reserva
+                    break;
+                }
             }
         } catch (IOException e) {
+            // Imprimir el error en caso de fallo al leer el archivo
             e.printStackTrace();
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */

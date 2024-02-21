@@ -1,4 +1,3 @@
-
 package sistemadeasientos;
 
 import java.io.BufferedReader;
@@ -8,17 +7,24 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
 public class frmDatos extends javax.swing.JFrame {
 
-    
     private frmBus parentForm;
     public static String nombre;
     public String posicion;
     public float precio;
     private boolean ocupado;
-    
-    public frmDatos(frmBus parent, String aNombre, float aPrecio,String aPosicion) {
+
+    /**
+     * Constructor para la ventana de ingreso de datos.
+     *
+     * @param parent El formulario principal (frmBus) que actúa como padre de
+     * esta ventana.
+     * @param aNombre El nombre del cliente.
+     * @param aPrecio El precio del asiento.
+     * @param aPosicion La posición del asiento.
+     */
+    public frmDatos(frmBus parent, String aNombre, float aPrecio, String aPosicion) {
         initComponents();
         parentForm = parent;
         posicion = aPosicion;
@@ -26,12 +32,11 @@ public class frmDatos extends javax.swing.JFrame {
         precio = aPrecio;
         CargarDatos();
     }
-    
+
     public frmDatos() {
         initComponents();
-        
+
     }
-    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -131,20 +136,36 @@ public class frmDatos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Método que se ejecuta al hacer clic en el botón jButton1. Realiza
+     * diferentes acciones dependiendo del estado del asiento. Si el asiento
+     * está ocupado, elimina la reserva y actualiza la interfaz. Si el asiento
+     * está disponible, recoge el nombre del cliente ingresado y envía los datos
+     * al formulario principal. Finalmente, cierra la ventana actual.
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(ocupado){
+        if (ocupado) {
             eliminarReserva();
             parentForm.EliminarDato(posicion);
-        }else{
-           nombre = txtNombre.getText();
-        parentForm.EnviarDatos(nombre);      
+        } else {
+            nombre = txtNombre.getText();
+            parentForm.EnviarDatos(nombre);
         }
-        this.dispose(); 
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void eliminarReserva(){
-       // Obtener la ruta del archivo de entrada y el nombre del archivo
-       String archivoEntrada = "D:\\Heber\\Documents\\github\\Seating-System\\src\\sistemadeasientos\\resource\\asientos.txt";
+    /**
+     * Este método se encarga de eliminar una reserva de un archivo de asientos.
+     * Lee el archivo de entrada línea por línea, omite la línea que contiene la
+     * posición del asiento a eliminar, y escribe las líneas restantes en un
+     * archivo temporal. Luego, reemplaza el archivo original con el archivo
+     * temporal.
+     */
+    private void eliminarReserva() {
+        // Obtener la ruta del archivo de entrada y el nombre del archivo
+
+        //NOTA IMPORTANTE:CAMBIAR A SU RUTA DONDE GUARDO EL PROYECTO
+        String archivoEntrada = "D:\\Heber\\Documents\\github\\Seating-System\\src\\sistemadeasientos\\resource\\asientos.txt";
         File archivo = new File(archivoEntrada);
         String directorio = archivo.getParent();
         String nombreArchivo = archivo.getName();
@@ -153,7 +174,7 @@ public class frmDatos extends javax.swing.JFrame {
         String rutaArchivoSalida = directorio + File.separator + "temp_" + nombreArchivo;
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivoEntrada));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(rutaArchivoSalida))) {
+                BufferedWriter bw = new BufferedWriter(new FileWriter(rutaArchivoSalida))) {
 
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -171,36 +192,40 @@ public class frmDatos extends javax.swing.JFrame {
         archivo.delete();
         archivoSalida.renameTo(new File(directorio + File.separator + nombreArchivo));
     }
-    
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void CargarDatos(){
-        
-        
-        if(posicion.contains("A") || posicion.contains("D")){
+    /**
+     * Este método se encarga de cargar los datos en la ventana de ingreso de
+     * datos (frmDatos). Establece el tipo de asiento (ventana o pasillo) y el
+     * precio según la posición del asiento. Si hay datos previamente ingresados
+     * (nombre y precio), los muestra en la ventana y cambia el texto de los
+     * botones.
+     */
+    private void CargarDatos() {
+        if (posicion.contains("A") || posicion.contains("D")) {
             jLabel5.setText("VENTANA");
-            jLabel3.setText("Q"+ 5.00);
-            
-        }else{
+            jLabel3.setText("Q" + 5.00);
+
+        } else {
             jLabel5.setText("PASILLO");
-            jLabel3.setText("Q"+ 10.00);
+            jLabel3.setText("Q" + 10.00);
         }
-        
-        if(!nombre.equals("") && precio != 0){
-            txtNombre.setText(nombre);      
-            jLabel3.setText("Q"+ precio);
+
+        if (!nombre.equals("") && precio != 0) {
+            txtNombre.setText(nombre);
+            jLabel3.setText("Q" + precio);
             jButton1.setText("Cancelar Reservacion");
             jButton2.setText("Cerrar");
             ocupado = true;
             txtNombre.setEditable(false);
-        }else{
+        } else {
             ocupado = false;
         }
-        
     }
-    
+
     /**
      * @param args the command line arguments
      */

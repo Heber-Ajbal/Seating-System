@@ -1,2 +1,1 @@
-Edith;false;C4;C4;10.0
 holaa;false;A0;A0;10.0

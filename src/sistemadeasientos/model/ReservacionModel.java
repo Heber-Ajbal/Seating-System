@@ -16,6 +16,14 @@ public class ReservacionModel {
     private String Id;
     private float precio;
 
+    /**
+     * Constructor de la clase ReservacionModel.
+     * @param nombreCliente El nombre del cliente que reservó el asiento.
+     * @param disponible Indica si el asiento está disponible o no.
+     * @param pocision La posición del asiento en el sistema de reservación.
+     * @param Id El identificador único del asiento.
+     * @param precio El precio del asiento.
+     */
     public ReservacionModel(String nombreCliente, boolean disponible, String pocision, String Id, float precio) {
         this.nombreCliente = nombreCliente;
         this.disponible = disponible;
@@ -24,6 +32,8 @@ public class ReservacionModel {
         this.precio = precio;
     }
 
+    // Métodos getters y setters...
+    
     public String getNombreCliente() {
         return nombreCliente;
     }

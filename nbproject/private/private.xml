@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Heber/Documents/github/Seating-System/src/sistemadeasientos/frmDatos.java</file>
+            <file>file:/D:/Heber/Documents/github/Seating-System/src/sistemadeasientos/business/ListaAsientos.java</file>
+            <file>file:/D:/Heber/Documents/github/Seating-System/src/sistemadeasientos/frmBus.java</file>
+            <file>file:/D:/Heber/Documents/github/Seating-System/src/sistemadeasientos/business/Archivo.java</file>
+            <file>file:/D:/Heber/Documents/github/Seating-System/src/sistemadeasientos/business/AsientoHelper.java</file>
+            <file>file:/D:/Heber/Documents/github/Seating-System/src/sistemadeasientos/SistemaDeAsientos.java</file>
+        </group>
     </open-files>
 </project-private>
